@@ -1,2 +1,2 @@
-# SolidPrinciples
- A Project to Demostrate Solid Principles in Unity
+# Single Responsibilty
+ A Demostration of the Single Responsibility principle in Unity
