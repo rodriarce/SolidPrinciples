@@ -9,7 +9,7 @@ public class BlueBullet : BaseBullet, IBullet
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
        
 
