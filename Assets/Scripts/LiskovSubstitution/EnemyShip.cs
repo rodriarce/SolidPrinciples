@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class EnemyShip : MonoBehaviour // Base Enemy Class
 {
-    public float speedShip;
-    public float healthShip;
+    public float speedShip;    
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    public virtual void GetDamage(int damage)
-    {
-        healthShip -= damage;
-        if (healthShip < 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+   
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        {
-            GetDamage(GameManager.instance.baseBullet.damageBullet);
+        {         
+          GetComponent<IEnemyHealth>().GetDamage(GameManager.instance.baseBullet.damageBullet);
         }
     }
 
