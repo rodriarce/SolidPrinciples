@@ -21,15 +21,27 @@ public class EnemyHealth : MonoBehaviour, IEnemyHealth
         if (Health <= 0)
         {
             Debug.Log("Death Ship");
-            Destroy(this.gameObject);
+            
+            StartCoroutine(RegenerateTime());
+            
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public IEnumerator RegenerateTime()
+    {
+        gameObject.SetActive(false);
+        yield return new WaitForSecondsRealtime(2f);
+        gameObject.SetActive(true);
+        Health = 100;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            GetDamage((int)other.GetComponent<EnemyBullet>().damage);
+            Debug.Log("ENemy Get Bullet");
+            GetDamage((int)other.GetComponent<DamageBullet>().Damage);
+            Destroy(other.gameObject);
         }
     }
 

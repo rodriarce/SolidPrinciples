@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour, IEnemyDamage
 {
-    public int Damage { get; set; }
+    public int Damage { get => damage;
+                
+            
+            set
+            {
+            damage = value;
+            }
+         }
     public int damage;
     public GameObject bullet;
     public GameObject Bullet { 

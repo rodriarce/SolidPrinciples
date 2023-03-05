@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IBullet
-{  
-     int Number
+{
+    public GameObject PrefabBullet
     {
-        get{ return 15;}
-        set { }
-             
-    
+        get;
+        set;
+    }
+    public int Damage
+    { get; 
+        set; 
     }
     void CreateBullet();
     

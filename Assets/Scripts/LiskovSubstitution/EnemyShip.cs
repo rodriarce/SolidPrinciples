@@ -12,11 +12,12 @@ public class EnemyShip : MonoBehaviour // Base Enemy Class
         
     }
    
-    public virtual void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {         
           GetComponent<IEnemyHealth>().GetDamage(GameManager.instance.baseBullet.damageBullet);
+            Destroy(other.gameObject);
         }
     }
 
