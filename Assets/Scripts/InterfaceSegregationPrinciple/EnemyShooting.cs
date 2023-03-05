@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour, IEnemyDamage
+public class EnemyShooting : MonoBehaviour, IBulletData
 {
     public int Damage { get => damage;
                 
@@ -59,7 +59,7 @@ public class EnemyShooting : MonoBehaviour, IEnemyDamage
     {
         while (true)
         {
-            ShootBullet(Damage);
+            ShootBullet();
             yield return new WaitForSecondsRealtime(speedShoot);
         }        
     }
@@ -69,7 +69,7 @@ public class EnemyShooting : MonoBehaviour, IEnemyDamage
     {
         
     }
-    public void ShootBullet(int damage)
+    public void ShootBullet()
     {
         var newBullet = Instantiate(Bullet);
         newBullet.transform.position = Bullet.transform.position;

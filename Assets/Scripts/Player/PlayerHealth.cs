@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
             Debug.Log("You Touch a Bullet");
-            GetDamage((int)other.GetComponent<EnemyBullet>().damage);
+            GetDamage((int)other.GetComponent<IEnemyDamage>().Damage);
             Destroy(other.gameObject);
         }
     }

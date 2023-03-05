@@ -13,6 +13,11 @@ public interface IBullet
     { get; 
         set; 
     }
+    public float SpeedBullet
+    {
+        get;
+        set;
+    }
     void CreateBullet();
     
 }

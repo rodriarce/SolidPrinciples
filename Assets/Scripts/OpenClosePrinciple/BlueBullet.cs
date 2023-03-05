@@ -24,6 +24,17 @@ public class BlueBullet :MonoBehaviour, IBullet
         get;
         set;
     }
+    public float SpeedBullet { 
+        get
+        {
+            return speedBullet;
+        }
+        set
+        {
+            speedBullet = value;
+        }
+    }
+    public float speedBullet;
 
     public int damage;
 
@@ -46,7 +57,7 @@ public class BlueBullet :MonoBehaviour, IBullet
     {
         GameObject newProjectile = Instantiate(prefabBullet);
         newProjectile.transform.position = prefabBullet.transform.position;
-        newProjectile.GetComponent<DamageBullet>().Damage = Damage;
+        newProjectile.GetComponent<IShootBullet>().SetData(SpeedBullet, Damage);
         newProjectile.SetActive(true);
     }
 }
