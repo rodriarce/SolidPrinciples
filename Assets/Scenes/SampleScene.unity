@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84ecc0d189988f40a63afb39abebe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 100
   bullet: {fileID: 931050870}
   speedShoot: 2
   speedBullet: 5
@@ -1124,6 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633f9c3f4facdc4a9d3edf3639f8f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedDamage: 10
 --- !u!1 &931050870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,8 +1172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bc47853ee52ce45ac2c2a0afb4a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  speed: 40
 --- !u!212 &931050873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1909,6 +1908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 1673623704}
   damage: 20
+  speedBullet: 10
 --- !u!114 &1461991549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,8 +2014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bc47853ee52ce45ac2c2a0afb4a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
-  speed: 20
 --- !u!212 &1624356906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2125,7 +2123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1673623705}
   - component: {fileID: 1673623708}
-  - component: {fileID: 1673623707}
   - component: {fileID: 1673623710}
   - component: {fileID: 1673623709}
   - component: {fileID: 1673623711}
@@ -2151,19 +2148,6 @@ Transform:
   m_Father: {fileID: 1461991540}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1673623707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673623704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014c8724c952a1945b02a2eebb3cbb1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedProjectile: 10
 --- !u!212 &1673623708
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2275,6 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633f9c3f4facdc4a9d3edf3639f8f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedDamage: 10
 --- !u!1 &1724885103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,8 +2534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bc47853ee52ce45ac2c2a0afb4a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  speed: 0
 --- !u!212 &1893563883
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class BlueBullet :MonoBehaviour, IBullet
             speedBullet = value;
         }
     }
+    
     public float speedBullet;
 
     public int damage;

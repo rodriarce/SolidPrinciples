@@ -73,7 +73,7 @@ public class EnemyShooting : MonoBehaviour, IBulletData
     {
         var newBullet = Instantiate(Bullet);
         newBullet.transform.position = Bullet.transform.position;
-        newBullet.GetComponent<EnemyBullet>().SetData(Damage, speedBullet);
+        newBullet.GetComponent<IShootBullet>().SetData(Damage, speedBullet);
         newBullet.SetActive(true);
 
     }

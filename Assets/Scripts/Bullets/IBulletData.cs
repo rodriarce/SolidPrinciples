@@ -9,8 +9,7 @@ public interface IBulletData
         get;
         set;
     }
-    float SpeedShoot
-    { get; set; }
+  
     int Damage { get; set; }
     float SpeedBullet { get; set; }
     void ShootBullet();

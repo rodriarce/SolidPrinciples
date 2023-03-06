@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour, IEnemyHealth
         if (other.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("ENemy Get Bullet");
-            GetDamage((int)other.GetComponent<DamageBullet>().Damage);
+            GetDamage((int)other.GetComponent<IShootBullet>().Damage);
             Destroy(other.gameObject);
         }
     }

@@ -16,18 +16,29 @@ public class RedBullet : MonoBehaviour, IBulletData
     
     }
     public GameObject prefabBullet;
-    public float SpeedShoot { 
-        get;
-        set;
-    }
+ 
     public int Damage { 
-        get;
-        set;
+        get
+        {
+            return damage;
+        }
+        set
+        {
+            damage = value;
+        }
     }
+    public int damage;
     public float SpeedBullet {
-        get;
-        set;
+        get
+        {
+            return speedBullet;
+        }
+        set
+        {
+            speedBullet = value;
+        }
     }
+    public float speedBullet;
 
 
     // Start is called before the first frame update
